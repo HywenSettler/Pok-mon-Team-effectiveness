@@ -1,4 +1,4 @@
-const client = require("../server");
+const mongoose
 
 let data = await client.db('Pokédex');
 

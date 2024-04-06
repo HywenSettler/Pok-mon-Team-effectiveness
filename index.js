@@ -24,7 +24,7 @@ mongoose.connection.on('disconnected', () => {
 
 const app = express();
 
-app.use('api/v1', Pokemon);
+app.use('/api/v1', Pokemon);
 
 const PORT = 3000; 
 app.listen(PORT, () => {

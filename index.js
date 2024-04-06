@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Pokemon = require('./routes/Pokemon');
 
-mongoose.connect("mongodb+srv://Hywen:Porygon->2@cluster0.wq6h7qg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then().catch(error => {
+mongoose.connect("mongodb+srv://Hywen:Porygon->2@cluster0.wq6h7qg.mongodb.net/Pokédex?retryWrites=true&w=majority&appName=Cluster0").then().catch(error => {
   console.log("Error in connecting to MongoDB");
 })
 
@@ -26,7 +26,7 @@ const app = express();
 
 app.use('/api/v1', Pokemon);
 
-const PORT = process.env.port || 3000; 
+const PORT = process.env.port || 3000;
 app.listen(PORT, () => {
-    console.log('Server is running on port ' + PORT);
+  console.log('Server is running on port ' + PORT);
 });

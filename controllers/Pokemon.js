@@ -1,8 +1,7 @@
 const { Pokemon } = require("../models/Pokemon");
 
 const getPokemonInfo = async function (req, res) {
-    console.log("Over here")
-    const pokemon = await Pokemon.findOne({"name": "Pidgeot"});
+    const pokemon = await Pokemon.find({});
     return res.send({ status: 200, pokemon });
 }
 

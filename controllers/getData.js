@@ -1,5 +1,8 @@
-const mongoose
+const { Pokemon } = require("../models/Pokemon");
 
-let data = await client.db('Pokédex');
+const getPokemonInfo = async function(){
+    const pokemon = await Pokemon.findOne({"number": 18});
+    return pokemon;
+}
 
-console.log(data);
+module.exports = { getPokemonInfo };
